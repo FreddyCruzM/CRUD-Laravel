@@ -13,17 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('usuarios.listar');
-});
+use App\Http\Controllers\UserController;
 
-/*
-|--------------------------------------------------------------------------
-| Esta seria otra forma de poner la ruta del controlador:
-|--------------------------------------------------------------------------
-// Route::get('/form', 'UserController@userform'); 
-*/
+//Listado de usuarios
+Route::get('/','UserController@list');
 
-
+//Formulario de usuarios
 Route::get('/form', 'UserController@userform');
+
+//Formulario de guardar usuarios
 Route::post('/save','UserController@save')->name('save');
