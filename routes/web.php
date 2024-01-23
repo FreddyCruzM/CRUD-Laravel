@@ -14,5 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('usuarios.listar');
 });
+
+/*
+|--------------------------------------------------------------------------
+| Esta seria otra forma de poner la ruta del controlador:
+|--------------------------------------------------------------------------
+// Route::get('/form', 'UserController@userform'); 
+*/
+
+
+Route::get('/form', 'UserController@userform');
+Route::post('/save','UserController@save')->name('save');
