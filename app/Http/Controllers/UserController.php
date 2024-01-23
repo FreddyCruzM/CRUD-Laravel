@@ -34,7 +34,13 @@ class UserController extends Controller
         $userdata = request()->except('_token');
         Usuario::insert(userdata);
 
-        return back()->with('usuarioGuardado','Usuario guardado');
+        return back()->with('usuarioGuardado','Usuario guardado');  
     }
-    
+
+    //Eliminar Usuarios
+    public function delete($id){
+        Usuario::delete($id);
+
+        return back()->with('usuarioEliminado','Usuario eliminado');
+    }
 }

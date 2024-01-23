@@ -49,6 +49,10 @@
             </div>
         
         </div>
+
     </div>
+
+    <!-- Boton para volver a la pantalla de agregar usuario -->
+    <a class="btn btn-light btn-xs mt-5" href="{{ url ('/')}}">@laquo volver</a>
 
 </div>
